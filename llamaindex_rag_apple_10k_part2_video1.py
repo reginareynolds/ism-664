@@ -1,8 +1,7 @@
 # Import libraries
 import os
-import sqlite3
-from dotenv import load_dotenv
 import streamlit as st
+from dotenv import load_dotenv
 
 # Load API keys from .env file
 load_dotenv()
