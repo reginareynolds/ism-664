@@ -19,19 +19,18 @@ index = LlamaCloudIndex(
   api_key=llama_api_key,
 )
 
+
 # Function to generate response using queried input
 def generate_response(input_text):
-  response = index.as_query_engine().query(input_text)
+  query_response = index.as_query_engine().query(input_text)
 
   # Return the response from the LLM
-  return str(response)
+  return str(query_response)
+
 
 def generate_response_nodes(input_text):
   nodes = index.as_retriever().retrieve(input_text)
   return str(nodes)
-
-# Create query
-query = "You are an expert business analyst. What was the difference between Apple's projected 2024 earnings versus their actual earnings? What events may have contributed to this difference?"
 
 
 # Set up UI frontend using Streamlit
